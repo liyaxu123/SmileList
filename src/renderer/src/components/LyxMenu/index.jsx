@@ -4,7 +4,7 @@ import LyxMenuItem from '../LyxMenuItem'
 import { LyxMenuWrap } from './style'
 import { CaretRightOutlined } from '@ant-design/icons'
 
-const LyxMenu = memo(({ list }) => {
+const LyxMenu = memo(({ list, onClick }) => {
   const { token } = theme.useToken()
   const [activeKey, setActiveKey] = useState('1')
 
@@ -23,7 +23,10 @@ const LyxMenu = memo(({ list }) => {
                 className={it.key === activeKey ? 'active' : null}
                 key={it.key}
                 {...it}
-                onClick={() => setActiveKey(it.key)}
+                onClick={() => {
+                  setActiveKey(it.key)
+                  onClick(it)
+                }}
               />
             ))
           }))
@@ -43,7 +46,10 @@ const LyxMenu = memo(({ list }) => {
               className={item.key === activeKey ? 'active' : null}
               key={item.key}
               {...item}
-              onClick={() => setActiveKey(item.key)}
+              onClick={() => {
+                setActiveKey(item.key)
+                onClick(item)
+              }}
             />
           )
         }

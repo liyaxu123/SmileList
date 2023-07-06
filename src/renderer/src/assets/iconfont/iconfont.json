@@ -1,0 +1,44 @@
+{
+  "id": "4153217",
+  "name": "windows",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "35438713",
+      "name": "窗体-置顶",
+      "font_class": "chuangti-zhiding",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "35440721",
+      "name": "窗体-最大化",
+      "font_class": "chuangti-zuidahua",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "35440764",
+      "name": "窗体-最小化",
+      "font_class": "chuangti-zuixiaohua",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "35440871",
+      "name": "窗体-向下还原",
+      "font_class": "chuangti-xiangxiahuanyuan",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "35441184",
+      "name": "窗体-关闭",
+      "font_class": "chuangti-guanbi",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

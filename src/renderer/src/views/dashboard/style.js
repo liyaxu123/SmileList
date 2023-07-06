@@ -2,14 +2,15 @@ import { styled } from 'styled-components'
 
 export const DashboardWrap = styled.div`
   width: calc(100vw - 60px);
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
 
   .left-pane {
+    box-sizing: border-box;
+    height: 100%;
     padding: 8px;
   }
 
   .right-pane {
-    padding: 12px;
   }
 `

@@ -13,6 +13,7 @@ import {
   DeleteOutlined
 } from '@ant-design/icons'
 import { Scrollbars } from 'react-custom-scrollbars'
+import WindowTool from '@renderer/components/WindowTool'
 
 const Dashboard = memo(() => {
   const { token } = theme.useToken()
@@ -379,13 +380,21 @@ const Dashboard = memo(() => {
     <DashboardWrap>
       {/* 分割面板 */}
       <SplitPane allowResize={true} split="vertical" minSize={213} maxSize={400} defaultSize={260}>
-        <Scrollbars>
+        <Scrollbars autoHide>
           <div className="left-pane">
-            <LyxMenu list={menuList} />
+            <LyxMenu
+              list={menuList}
+              onClick={(data) => {
+                console.log(data)
+              }}
+            />
           </div>
         </Scrollbars>
 
-        <div className="right-pane">456</div>
+        <div className="right-pane">
+          <WindowTool />
+          <div>123</div>
+        </div>
       </SplitPane>
     </DashboardWrap>
   )

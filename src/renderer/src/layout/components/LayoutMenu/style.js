@@ -22,6 +22,8 @@ export const LayoutMenuWrap = styled.div`
       width: 35px;
       height: 35px;
       cursor: pointer;
+      /* 设置不能被拖拽 */
+      -webkit-app-region: no-drag;
 
       img {
         width: 100%;
@@ -39,6 +41,7 @@ export const LayoutMenuWrap = styled.div`
       align-items: center;
       gap: 10px;
       margin-top: 30px;
+      -webkit-app-region: no-drag;
 
       .menu-item {
         box-sizing: border-box;
@@ -77,6 +80,7 @@ export const LayoutMenuWrap = styled.div`
       align-items: center;
       gap: 10px;
       margin-top: 30px;
+      -webkit-app-region: no-drag;
 
       .menu-item {
         box-sizing: border-box;
