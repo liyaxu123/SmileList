@@ -14,3 +14,7 @@ export const DashboardWrap = styled.div`
   .right-pane {
   }
 `
+
+export const RightPaneWrap = styled.div`
+  padding: 12px;
+`

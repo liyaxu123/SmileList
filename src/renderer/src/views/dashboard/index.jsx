@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import SplitPane from 'react-split-pane'
 import { theme } from 'antd'
-import { DashboardWrap } from './style'
+import { DashboardWrap, RightPaneWrap } from './style'
 import LyxMenu from '@renderer/components/LyxMenu'
 import {
   BookOutlined,
@@ -14,6 +14,8 @@ import {
 } from '@ant-design/icons'
 import { Scrollbars } from 'react-custom-scrollbars'
 import WindowTool from '@renderer/components/WindowTool'
+import { Header, AddInput } from './components'
+import TodoList from '@renderer/components/TodoList'
 
 const Dashboard = memo(() => {
   const { token } = theme.useToken()
@@ -393,7 +395,11 @@ const Dashboard = memo(() => {
 
         <div className="right-pane">
           <WindowTool />
-          <div>123</div>
+          <RightPaneWrap>
+            <Header />
+            <AddInput />
+            <TodoList />
+          </RightPaneWrap>
         </div>
       </SplitPane>
     </DashboardWrap>

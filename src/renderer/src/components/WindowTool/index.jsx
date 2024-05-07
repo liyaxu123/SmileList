@@ -1,10 +1,11 @@
 import { memo } from 'react'
 import { WindowToolWrap } from './style'
-import { Minisize, Maxsize, Close, Wintop } from './components'
+import { Minisize, Maxsize, Close, Wintop, WindowInvisibility } from './components'
 
 const WindowTool = memo(() => {
   return (
     <WindowToolWrap>
+      <WindowInvisibility />
       <Wintop />
       <Minisize />
       <Maxsize />

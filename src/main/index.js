@@ -25,6 +25,16 @@ function createWindow() {
 
   // 防止窗口内容被其他应用捕获，可实现窗口隐形功能，开启后录屏或者截屏中不可见，可以在录课、直播及在线会议中展示提词内容，防止忘词。同时，提词内容仅自己可见，其他人无法看到。
   mainWindow.setContentProtection(true)
+  ipcMain.on('mainWinHide', (ev, isHide) => {
+    console.log(isHide)
+    if (mainWindow) {
+      if (isHide) {
+        mainWindow.setContentProtection(true)
+      } else {
+        mainWindow.setContentProtection(false)
+      }
+    }
+  })
 
   // 自定义右键菜单
   ipcMain.on('App_contextMenu', () => {
